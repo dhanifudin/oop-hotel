@@ -366,7 +366,7 @@ Struktur:
 - Pasang `@Override` pada setiap override: compiler menolak jika nama atau parameter salah.
 - `super.describe()` memanggil versi milik parent. Teks `None` hanya dipakai jika fasilitas bernilai `null`. `toString()` cukup memanggil `describe()`.
 - Overload: `extendStay()` tidak perlu mengulang isi `extendStay(int)`, cukup memanggilnya dengan angka 2. Simpan total perpanjangan di sebuah field `private` di `HotelRoom`.
-- `getTotalPrice()` harus memanggil **method** `pricePerNight()`, bukan menulis angka langsung. Itulah polymorphism: objek yang menentukan versi method yang berjalan.
+- `getTotalPrice()` harus memanggil **method** `pricePerNight()`, bukan menulis angka langsung. Objek yang menentukan versi method yang berjalan.
 - Constructor boleh memanggil constructor lain di kelas yang **sama** dengan `this(...)` (juga harus baris pertama). Pakai ini untuk `StandardRoom` 4 parameter dan `SuiteRoom` 2 parameter.
 - Cara memeriksa tanpa tes: taruh `StandardRoom`, `DeluxeRoom`, dan `SuiteRoom` dalam satu array `HotelRoom[]`, cetak `pricePerNight()` dan `describe()` tiap elemen, lalu bandingkan dengan tabel di atas.
 
@@ -549,7 +549,7 @@ Thank you, goodbye
 Rekam video **minimal 10 menit, tanpa batas maksimal** yang memperlihatkan **wajahmu dan layarmu**. Unggah ke YouTube sebagai **Unlisted**, lalu tempel linknya di `video/LINK.md`. Isi video, berurutan:
 
 1. **Pengenalan**: nama, NIM, nomor absen, dan varian (Varian B: Reservasi Hotel).
-2. **Telusuri diagram dan kodemu**: bandingkan diagram dengan kode yang kamu tulis. Jelaskan enkapsulasi; empat relasi kelas (asosiasi, agregasi, komposisi, dependensi) dan **bedakan agregasi dari komposisi dengan menunjuk baris kodenya**; inheritance; override dibanding overload; serta polymorphism lewat array `HotelRoom[]`.
+2. **Telusuri diagram dan kodemu**: bandingkan diagram dengan kode yang kamu tulis. Jelaskan enkapsulasi; empat relasi kelas (asosiasi, agregasi, komposisi, dependensi) dan **bedakan agregasi dari komposisi dengan menunjuk baris kodenya**; inheritance; serta override dibanding overload.
 3. **Demo langsung**: jalankan `mvn test`, lalu jalankan aplikasi dan peragakan satu alur transaksi lengkap (daftar tamu, tambah kamar, check in, lihat daftar, check out) dan **satu kasus gagal** (misalnya check in ketiga oleh tamu yang sama, atau tahun dibangun 1949).
 4. **Jawab 3 pertanyaan teori dari bank soal**, satu dari setiap kategori. Dosen mengumumkan bank soal. Nomor soal ditentukan nomor absen (1 sampai 28), bukan NIM:
    - Soal 1 (Konsep dan enkapsulasi), nomor 1 sampai 4 = (bagian bulat dari (nomor absen - 1) / 4) mod 4, lalu + 1.
