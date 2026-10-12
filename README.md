@@ -50,7 +50,7 @@ Diagram seluruh kelas ada di bawah. Bagian demi bagian akan menambahkan detailny
 
 ## Memulai
 
-1. Buka link GitHub Classroom dari Dosen dan terima tugas. Classroom membuat repositori **Private** dari templat ini.
+1. Buka https://github.com/dhanifudin/oop-hotel, klik **Use this template**, lalu **Create a new repository**. Pilih **Private**, lalu undang akun GitHub Dosen (`dhanifudin`) sebagai collaborator (**Settings > Collaborators**).
 2. Clone repositori barumu. Pastikan WakaTime aktif.
 3. Commit dan push setiap selesai satu bagian.
 4. Buka tab **Actions**. Autograder berjalan di setiap push dan menampilkan nilai kodemu.
@@ -546,16 +546,17 @@ Thank you, goodbye
 
 ## Video Penjelasan (wajib)
 
-Rekam video **10 sampai 15 menit** yang memperlihatkan **wajahmu dan layarmu**. Unggah ke YouTube sebagai **Unlisted**, lalu tempel linknya di `video/LINK.md`. Isi video, berurutan:
+Rekam video **minimal 10 menit, tanpa batas maksimal** yang memperlihatkan **wajahmu dan layarmu**. Unggah ke YouTube sebagai **Unlisted**, lalu tempel linknya di `video/LINK.md`. Isi video, berurutan:
 
-1. **Pengenalan (maksimal 1 menit)**: nama, NIM, dan varian (Varian B: Reservasi Hotel).
+1. **Pengenalan**: nama, NIM, nomor absen, dan varian (Varian B: Reservasi Hotel).
 2. **Telusuri diagram dan kodemu**: bandingkan diagram dengan kode yang kamu tulis. Jelaskan enkapsulasi; empat relasi kelas (asosiasi, agregasi, komposisi, dependensi) dan **bedakan agregasi dari komposisi dengan menunjuk baris kodenya**; inheritance; override dibanding overload; serta polymorphism lewat array `HotelRoom[]`.
 3. **Demo langsung**: jalankan `mvn test`, lalu jalankan aplikasi dan peragakan satu alur transaksi lengkap (daftar tamu, tambah kamar, check in, lihat daftar, check out) dan **satu kasus gagal** (misalnya check in ketiga oleh tamu yang sama, atau tahun dibangun 1949).
-4. **Jawab 2 pertanyaan dari bank soal**. Dosen mengumumkan bank soal. Nomor soalmu ditentukan NIM:
-   - Soal 1 = (digit terakhir NIM) + 1, hasilnya 1 sampai 10.
-   - Soal 2 = ((dua digit terakhir NIM) mod 10) + 11, hasilnya 11 sampai 20.
-   - Contoh: NIM berakhiran `47` memberi soal 8 dan soal 18.
-5. **Refleksi (maksimal 1 menit)**: bagian yang paling sulit dan apa yang kamu pelajari.
+4. **Jawab 3 pertanyaan teori dari bank soal**, satu dari setiap kategori. Dosen mengumumkan bank soal. Nomor soal ditentukan nomor absen (1 sampai 28), bukan NIM:
+   - Soal 1 (Konsep dan enkapsulasi), nomor 1 sampai 4 = (bagian bulat dari (nomor absen - 1) / 4) mod 4, lalu + 1.
+   - Soal 2 (Relasi kelas), nomor 5 sampai 8 = ((nomor absen - 1) mod 4) + 5.
+   - Soal 3 (Inheritance, override, overload), nomor 9 sampai 14 = ((nomor absen - 1) mod 6) + 9.
+   - Contoh: nomor absen 28 memberi soal 3, 8, dan 12.
+5. **Refleksi**: bagian yang paling sulit dan apa yang kamu pelajari.
 
 Rubrik video disediakan oleh dosen (`rubrik-video.md`, dibagikan terpisah). Video yang tidak ada atau terbukti bukan kodemu mengurangi nilai kode (lihat [Penilaian](#penilaian)).
 
@@ -563,7 +564,7 @@ Rubrik video disediakan oleh dosen (`rubrik-video.md`, dibagikan terpisah). Vide
 
 Serahkan satu file PDF: `laporan/Laporan_<NIM>_<Nama>.pdf`, contoh `laporan/Laporan_2441720001_Rina_Wijaya.pdf`. Isi laporan:
 
-1. **Identitas**: nama, NIM, kelas, varian, link repositori GitHub, dan link video YouTube.
+1. **Identitas**: nama, NIM, nomor absen, kelas, varian, link repositori GitHub, dan link video YouTube.
 2. **Hasil pengujian**: screenshot `mvn test` atau tab Actions yang menampilkan nilai.
 3. **Bukti WakaTime**: screenshot dashboard project `uts-b-hotel` dan total jam dalam teks.
 4. **Refleksi**: konsep yang masih membingungkan dan rencana belajarmu.
