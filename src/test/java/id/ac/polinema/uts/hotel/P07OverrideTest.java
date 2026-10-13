@@ -77,14 +77,4 @@ class P07OverrideTest {
                     "toString harus mengembalikan describe() pada " + it.getClass().getSimpleName());
         }
     }
-
-    @Test
-    @DisplayName("Polymorphism: objek yang menentukan versi method, bukan tipe variabel")
-    void polymorphism() throws Throwable {
-        Object[] rooms = {room(), new StandardRoom("1", "Garden Room", 2015), deluxe(), suite()};
-        int[] expected = {400000, 400000, 650000, 1200000};
-        for (int i = 0; i < rooms.length; i++) {
-            assertEquals(expected[i], R.call(rooms[i], "pricePerNight"));
-        }
-    }
 }

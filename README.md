@@ -10,7 +10,7 @@ Aplikasi konsol reservasi hotel, dibangun bertahap dari Bagian 1 sampai 7, lalu 
 - Pakai array biasa. Jangan pakai `List` atau `ArrayList`.
 - Jangan pakai `System.out.println` di `Hotel` dan kelas model. Tampilan hanya di `Main` dan `HotelApp`.
 - Nyalakan WakaTime setiap kali mengerjakan (lihat Langkah 0).
-- Ini ujian: kerjakan **sendiri**. Kode, video, dan laporan harus hasil kerjamu. Kode atau laporan salinan tidak dinilai.
+- Kerjakan sendiri tanpa bantuan AI. Jangan memakai AI (chatbot, asisten kode, atau autocomplete berbasis AI) untuk menulis kode, menjawab soal, atau menyusun laporan. Kode, video, dan laporan harus hasil kerjamu, dan kamu menjelaskan kodemu langsung di video. Kode atau laporan salinan tidak dinilai.
 
 ## Langkah 0: Pasang WakaTime (wajib, sebelum menulis kode apa pun)
 
@@ -366,7 +366,7 @@ Struktur:
 - Pasang `@Override` pada setiap override: compiler menolak jika nama atau parameter salah.
 - `super.describe()` memanggil versi milik parent. Teks `None` hanya dipakai jika fasilitas bernilai `null`. `toString()` cukup memanggil `describe()`.
 - Overload: `extendStay()` tidak perlu mengulang isi `extendStay(int)`, cukup memanggilnya dengan angka 2. Simpan total perpanjangan di sebuah field `private` di `HotelRoom`.
-- `getTotalPrice()` harus memanggil **method** `pricePerNight()`, bukan menulis angka langsung. Objek yang menentukan versi method yang berjalan.
+- `getTotalPrice()` harus memanggil **method** `pricePerNight()`, bukan menulis angka langsung. Itulah polymorphism: objek yang menentukan versi method yang berjalan.
 - Constructor boleh memanggil constructor lain di kelas yang **sama** dengan `this(...)` (juga harus baris pertama). Pakai ini untuk `StandardRoom` 4 parameter dan `SuiteRoom` 2 parameter.
 - Cara memeriksa tanpa tes: taruh `StandardRoom`, `DeluxeRoom`, dan `SuiteRoom` dalam satu array `HotelRoom[]`, cetak `pricePerNight()` dan `describe()` tiap elemen, lalu bandingkan dengan tabel di atas.
 
@@ -568,7 +568,7 @@ Serahkan satu file PDF: `laporan/Laporan_<NIM>_<Nama>.pdf`, contoh `laporan/Lapo
 2. **Hasil pengujian**: screenshot `mvn test` atau tab Actions yang menampilkan nilai.
 3. **Bukti WakaTime**: screenshot dashboard project `uts-b-hotel` dan total jam dalam teks.
 4. **Refleksi**: konsep yang masih membingungkan dan rencana belajarmu.
-5. **Pernyataan kejujuran**: tulis alat bantu apa saja yang kamu pakai (termasuk AI, dan untuk apa) atau tulis bahwa kamu tidak memakai alat bantu. Laporan salinan tidak dinilai.
+5. **Pernyataan kejujuran**: tulis bahwa kode, video, dan laporan ini kamu kerjakan sendiri tanpa bantuan AI.
 
 ## Pengumpulan
 
@@ -584,6 +584,8 @@ Kumpulkan **seluruh repositori**. Sebelum batas waktu, pastikan:
 Kirim link repositori sesuai arahan Dosen.
 
 ## Penilaian
+
+Polymorphism muncul sebagai konsep pengantar di studi kasus, tetapi tidak dinilai (tidak ada di tes, video, maupun bank soal).
 
 | Komponen | Bobot |
 |---|---|

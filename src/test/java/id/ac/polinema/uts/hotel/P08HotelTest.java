@@ -37,7 +37,7 @@ class P08HotelTest {
     }
 
     @Test
-    @DisplayName("addRoom menerima StandardRoom, DeluxeRoom, dan SuiteRoom dalam satu array (polymorphism)")
+    @DisplayName("addRoom menerima StandardRoom, DeluxeRoom, dan SuiteRoom dalam satu array")
     void mixedRooms() throws Throwable {
         Object h = hotel();
         StandardRoom standard = new StandardRoom("101", "Garden Room", 2015);

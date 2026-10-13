@@ -127,7 +127,7 @@ class P06InheritanceTest {
     }
 
     @Test
-    @DisplayName("Objek subclass bisa disimpan sebagai HotelRoom (polymorphism)")
+    @DisplayName("Setiap subclass adalah turunan HotelRoom (extends)")
     void isInstance() throws Throwable {
         Class<?> room = R.cls("HotelRoom");
         assertTrue(room.isInstance(new StandardRoom("1", "Garden Room", 2015)));
